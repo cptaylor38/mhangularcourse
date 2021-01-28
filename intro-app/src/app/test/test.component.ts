@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.formCountArray = Array(this.formcount).fill(0).map((x,i)=> i);
+  }
 
   ngOnInit(): void {
+  }
+
+  example: string = "String Interpolation Example";
+  formCountArray: Array = [];
+  formcount = 1;
+  methodExample(){
+    return "String Interpolation with method example.";
+  }
+  addForms(){
+    this.formCountArray.push(this.formCountArray.indexOf(this.formCountArray[this.formCountArray.length - 1]));
+    console.log(this.formCountArray.length)
   }
 
 }

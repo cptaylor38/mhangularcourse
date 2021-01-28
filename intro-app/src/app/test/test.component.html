@@ -1,1 +1,8 @@
-<p>test works!</p>
+
+<p>{{example}}</p>
+<p>{{methodExample()}}</p>
+<p>{{formCountArray.length}}</p>
+<button (click)="addForms()">Add more forms</button>
+<div *ngFor="let i of formCountArray">
+    <app-test-form></app-test-form>
+</div>
