@@ -14,9 +14,15 @@ export class TestFormComponent implements OnInit {
 
   testName: string = "";
   text: string = "";
+  inputValue = { name: "", text: "" };
 
   methodTest(){
     return this.testName;
+  }
+
+  getValues(event: any){
+    this.inputValue.name = event.testNameInput;
+    this.inputValue.text = event.textInput;
   }
 
 }

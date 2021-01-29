@@ -18,8 +18,8 @@ export class TestComponent implements OnInit {
   }
 
   example: string = "String Interpolation Example";
-  formCountArray: Array = [];
-  formcount: int = 1;
+  formCountArray: Array<number> = [];
+  formcount: number = 1;
   conditionalComponent: boolean = false;
   addButtonEnabled: boolean = true;
   toggleConditional(){

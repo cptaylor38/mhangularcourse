@@ -1,6 +1,11 @@
 <div class='container'>
-    <label for="testNameInput">Name: </label>
-    <input name="testNameInput" placeholder="Name" type="text" [(ngModel)]="testName" value={{methodTest()}}>
-    <label for="textInput">Message: </label>
-    <input type="text" [(ngModel)]="text" placeholder="Message" value={{text}}>
+    <form #userForm="ngForm" (ngSubmit)="getValues(userForm.value)">
+        <label for="testNameInput">Name: </label>
+        <input name="testNameInput" placeholder="Name" type="text" [(ngModel)]="testName" value={{methodTest()}}>
+        <label for="textInput">Message: </label>
+        <input name="textInput" type="text" [(ngModel)]="text" placeholder="Message" value={{text}}>
+        <button type="submit">Get value</button>
+    </form>
+    <p>{{inputValue.name}}</p>
+    <p>{{inputValue.text}}</p>
 </div>
