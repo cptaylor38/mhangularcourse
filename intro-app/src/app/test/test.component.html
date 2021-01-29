@@ -1,8 +1,15 @@
 
 <p>{{example}}</p>
 <p>{{methodExample()}}</p>
+<p [innerText]="example"></p>
 <p>{{formCountArray.length}}</p>
-<button (click)="addForms()">Add more forms</button>
+
+<button [disabled]="addButtonEnabled" (click)="addForms()">Add more forms</button>
 <div *ngFor="let i of formCountArray">
     <app-test-form></app-test-form>
+</div>
+
+<button (click)="toggleConditional()">Toggle hidden</button>
+<div *ngIf="conditionalComponent">
+    <p>Conditionally rendered component</p>
 </div>

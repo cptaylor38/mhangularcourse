@@ -9,6 +9,9 @@ export class TestComponent implements OnInit {
 
   constructor() {
     this.formCountArray = Array(this.formcount).fill(0).map((x,i)=> i);
+    setTimeout(() => {
+      this.addButtonEnabled = !this.addButtonEnabled;
+    }, 3000);
   }
 
   ngOnInit(): void {
@@ -16,7 +19,12 @@ export class TestComponent implements OnInit {
 
   example: string = "String Interpolation Example";
   formCountArray: Array = [];
-  formcount = 1;
+  formcount: int = 1;
+  conditionalComponent: boolean = false;
+  addButtonEnabled: boolean = true;
+  toggleConditional(){
+    this.conditionalComponent = !this.conditionalComponent;
+  }
   methodExample(){
     return "String Interpolation with method example.";
   }
