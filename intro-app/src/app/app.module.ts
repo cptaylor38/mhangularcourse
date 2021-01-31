@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { TestFormComponent } from './test-form/test-form.component';
+import { MockPromptComponent } from './mock-prompt/mock-prompt.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    TestFormComponent
+    TestFormComponent,
+    MockPromptComponent
   ],
   imports: [
     BrowserModule,

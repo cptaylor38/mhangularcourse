@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div [ngSwitch]="currentStage">
+        <div *ngSwitchCase="0">
+            <p>Welcome</p>
+            <button (click)="stageManager()">Next</button>
+        </div>
+        <div *ngSwitchCase="1">
+            <p>Business Hours Prompt</p>
+            <button (click)="stageManager()">Next</button>
+        </div>
+        <div *ngSwitchCase="2">
+            <p>Budget Hours prompt</p>
+            <button (click)="stageManager()">Next</button>
+        </div>
+        <div *ngSwitchCase="3">
+            <p>Number of Employees Prompt</p>
+            <button (click)="stageManager()">Next</button>
+        </div>
+        <div *ngSwitchCase="4">
+            <p>Busiest Time Prompt</p>
+            <button (click)="stageManager()">Next</button>
+        </div>
+    </div>
+</div>
