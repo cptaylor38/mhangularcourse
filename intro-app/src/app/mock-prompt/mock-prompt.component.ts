@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mock-prompt.component.css']
 })
 export class MockPromptComponent implements OnInit {
-  currentStage: int = 0;
+  currentStage: number = 0;
 
   constructor() {
    }
