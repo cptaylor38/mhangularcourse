@@ -16,7 +16,7 @@ export class MockPromptComponent implements OnInit {
 
   stageManager(){
     //temp to prevent having to refresh
-    if(this.currentStage === 4) this.currentStage = 0;
+    if(this.currentStage === 5) this.currentStage = 0;
     else this.currentStage++;
   }
 

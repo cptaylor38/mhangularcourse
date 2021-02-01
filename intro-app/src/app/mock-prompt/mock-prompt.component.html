@@ -1,23 +1,27 @@
-<div class="container-fluid">
+<div class="container-fluid" id='mock-prompt-pageContainer'>
     <div [ngSwitch]="currentStage">
         <div *ngSwitchCase="0">
-            <p>Welcome</p>
+            <app-mock-prompt-welcome></app-mock-prompt-welcome>
             <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="1">
-            <p>Business Hours Prompt</p>
+            <app-mock-prompt-operating-hours></app-mock-prompt-operating-hours>
             <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="2">
-            <p>Budget Hours prompt</p>
+            <app-mock-prompt-budget-hours></app-mock-prompt-budget-hours>
             <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="3">
-            <p>Number of Employees Prompt</p>
+            <app-mock-prompt-employee-count></app-mock-prompt-employee-count>
             <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="4">
-            <p>Busiest Time Prompt</p>
+            <app-mock-prompt-shift-priority></app-mock-prompt-shift-priority>
+            <button (click)="stageManager()">Next</button>
+        </div>
+        <div *ngSwitchCase="5">
+            <app-mock-prompt-employee-forms></app-mock-prompt-employee-forms>
             <button (click)="stageManager()">Next</button>
         </div>
     </div>

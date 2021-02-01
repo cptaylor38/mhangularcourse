@@ -1,0 +1,8 @@
+#welcome-cont {
+  height: 100%;
+  padding: 4rem;
+}
+
+#welcome-cont > ul > li {
+  font-size: 1.2em;
+}
