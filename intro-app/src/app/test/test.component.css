@@ -1,1 +1,12 @@
+.exCont code {
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 1.5rem;
+}
 
+.ngclass {
+  background: white;
+}

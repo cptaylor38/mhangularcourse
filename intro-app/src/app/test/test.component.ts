@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-
   constructor() {
     this.formCountArray = Array(this.formcount).fill(0).map((x,i)=> i);
     setTimeout(() => {
@@ -19,9 +18,12 @@ export class TestComponent implements OnInit {
 
   example: string = "String Interpolation Example";
   formCountArray: Array<number> = [];
+  colorToggled: boolean = true;
   formcount: number = 1;
+  testing: boolean = false;
   conditionalComponent: boolean = false;
   addButtonEnabled: boolean = true;
+  ngclass: boolean = true;
   toggleConditional(){
     this.conditionalComponent = !this.conditionalComponent;
   }
@@ -32,5 +34,13 @@ export class TestComponent implements OnInit {
     this.formCountArray.push(this.formCountArray.indexOf(this.formCountArray[this.formCountArray.length - 1]));
     console.log(this.formCountArray.length)
   }
-
+  toggleColor(){
+    this.colorToggled = !this.colorToggled;
+  }
+  getBackgroundColor(){
+    return this.colorToggled ? 'green' : 'red';
+  }
+  toggleNgClass(){
+    this.ngclass = !this.ngclass;
+  }
 }

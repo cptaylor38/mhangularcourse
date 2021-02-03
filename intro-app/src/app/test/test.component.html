@@ -1,15 +1,71 @@
-
+<h3>String Interpolation</h3>
 <p>{{example}}</p>
 <p>{{methodExample()}}</p>
+
 <p [innerText]="example"></p>
-<p>{{formCountArray.length}}</p>
+<p>Number of forms to render: {{formCountArray.length}}</p>
 
-<button [disabled]="addButtonEnabled" (click)="addForms()">Add more forms</button>
-<div *ngFor="let i of formCountArray">
-    <app-test-form></app-test-form>
+<h3>Event Binding</h3>
+<div class='exCont'>
+    <pre>
+        <code>
+            <p>&lt;button [disabled]="addButtonEnabled" (click)="addForms()"&gt;Add more forms&lt;/button&gt;</p>
+        </code>
+    </pre>
+    <button [disabled]="addButtonEnabled" (click)="addForms()">Add more forms</button>
 </div>
 
-<button (click)="toggleConditional()">Toggle hidden</button>
-<div *ngIf="conditionalComponent">
-    <p>Conditionally rendered component</p>
+<h3>Ng For</h3>
+<div class='exCont'>
+    <pre>
+        <code>
+            <p>&lt;div *ngFor="let i of formCountArray"&gt;&lt;/div&gt;</p>
+            <blockquote>&lt;app-test-form&gt;&lt;/app-test-form&gt;</blockquote>
+            <p>&lt;div&gt;</p>
+        </code>
+    </pre>
+    <div *ngFor="let i of formCountArray">
+        <app-test-form></app-test-form>
+    </div>
 </div>
+
+
+<h3>If example with controller.</h3>
+<div class='exCont'>
+    <pre>
+        <code>
+            <p>&lt;button (click)="toggleConditional()"&gt;Toggle hidden&lt;/button&gt;</p>
+            <p>
+                &lt;div *ngIf="conditionalComponent"&gt;
+                    &lt;p&gt;Conditionally rendered component&lt;/p&gt;
+                &lt;/div&gt;
+            </p>
+        </code>
+    </pre>
+    <button (click)="toggleConditional()">Toggle hidden</button>
+    <div *ngIf="conditionalComponent">
+        <p>Conditionally rendered component</p>
+    </div>
+</div>
+
+
+<h3>If, else example.</h3>
+<div class='exCont'>
+    <pre>
+        <code>
+            <p>&lt;h1 *ngIf="testing; else notTesting"&gt;Testing&lt;/h1&gt;</p>
+            <p>&lt;ng-template #notTesting&gt;&lt;h1&gt;Not Testing&lt;/h1&gt;&lt;/ng-template&gt;</p>
+        </code>
+    </pre>
+    <h4 *ngIf="testing; else notTesting">Testing</h4>
+    <ng-template #notTesting><h4>Not Testing</h4></ng-template>
+</div>
+
+<h3>Attribute Directives</h3>
+<p>Unlike structural directives, attribute directives don't add or remove elements. They only change the element they were placed in.</p>
+<h3>Dynamic styled components with property binding.</h3>
+<button (click)="toggleColor()">Toggle background color.</button>
+<p [ngStyle]="{backgroundColor: getBackgroundColor()}">Dynamically styled component.</p>
+<h3>NgClass example</h3>
+<button (click)="toggleNgClass()">Toggle class</button>
+<p [ngClass]="{ngclass: ngclass}">Toggled Class</p>
