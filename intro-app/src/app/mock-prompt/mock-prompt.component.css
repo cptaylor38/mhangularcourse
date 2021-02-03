@@ -4,23 +4,3 @@
   align-items: center;
   flex-direction: column;
 }
-
-.stage-buttons-container {
-  padding: 4rem;
-  width: 100%;
-  text-align: center;
-}
-
-.stage-buttons-container > button {
-  margin: 2rem;
-  font-size: 2rem;
-  outline: none;
-  border: none;
-  background: none;
-  color: white;
-  padding: 1rem;
-}
-
-.stage-buttons-container > button:hover {
-  color: black;
-}
