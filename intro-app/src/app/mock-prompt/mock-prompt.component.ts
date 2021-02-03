@@ -14,10 +14,17 @@ export class MockPromptComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  stageManager(){
+  stageManager(isNext: boolean){
+    console.log(isNext);
     //temp to prevent having to refresh
-    if(this.currentStage === 5) this.currentStage = 0;
-    else this.currentStage++;
+    if(isNext){
+      if(this.currentStage === 5) this.currentStage = 0;
+      else this.currentStage++;
+    }
+    //temp to prevent having to refresh
+    else {
+      if(this.currentStage > 0) this.currentStage--;
+    }
   }
 
 }

@@ -1,6 +1,22 @@
+.welcome-page-container {
+  background-image: url("https://images.unsplash.com/photo-1586523903177-854b166f4514?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 40vh;
+  min-width: 100vw;
+}
+
 #welcome-cont {
   height: 100%;
-  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(231, 223, 223);
+  color: rgb(44, 33, 33);
+  padding: 2rem 0;
 }
 
 #welcome-cont > ul > li {

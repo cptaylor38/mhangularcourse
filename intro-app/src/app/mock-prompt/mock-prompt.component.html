@@ -2,27 +2,25 @@
     <div [ngSwitch]="currentStage">
         <div *ngSwitchCase="0">
             <app-mock-prompt-welcome></app-mock-prompt-welcome>
-            <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="1">
             <app-mock-prompt-operating-hours></app-mock-prompt-operating-hours>
-            <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="2">
             <app-mock-prompt-budget-hours></app-mock-prompt-budget-hours>
-            <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="3">
             <app-mock-prompt-employee-count></app-mock-prompt-employee-count>
-            <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="4">
             <app-mock-prompt-shift-priority></app-mock-prompt-shift-priority>
-            <button (click)="stageManager()">Next</button>
         </div>
         <div *ngSwitchCase="5">
             <app-mock-prompt-employee-forms></app-mock-prompt-employee-forms>
-            <button (click)="stageManager()">Next</button>
         </div>
+    </div>
+    <div class='stage-buttons-container'>
+        <button (click)="stageManager(false)">Previous</button>
+        <button (click)="stageManager(true)">Next</button>
     </div>
 </div>
