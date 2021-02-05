@@ -6,27 +6,27 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./day-priority-list.component.css']
 })
 export class DayPriorityListComponent implements OnInit {
-  daysArray: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  daysArray: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  adjustArray(action: string, index: number){
+  adjustArray(e: {action: string, index: number}){
     let replaced = null;
-    let replacer = this.daysArray[index];
-    if(action === 'higher'){
-      if(index !== 0){
-        replaced = this.daysArray[index - 1];
-        this.daysArray[index - 1] = replacer;
-        this.daysArray[index] = replaced;
+    let replacer = this.daysArray[e.index];
+    if(e.action === 'higher'){
+      if(e.index !== 0){
+        replaced = this.daysArray[e.index - 1];
+        this.daysArray[e.index - 1] = replacer;
+        this.daysArray[e.index] = replaced;
       }
     }
     else {
-      if(index !== 6){
-        replaced = this.daysArray[index + 1];
-        this.daysArray[index + 1] = replacer;
-        this.daysArray[index] = replaced;
+      if(e.index !== 6){
+        replaced = this.daysArray[e.index + 1];
+        this.daysArray[e.index + 1] = replacer;
+        this.daysArray[e.index] = replaced;
       }
     }
   }

@@ -1,5 +1,5 @@
 <div class="dayItem">
     <div>{{day}}</div>
-    <button>Up</button>
-    <button>Down</button>
+    <button (click)="adjustPriority('higher', index)">Up</button>
+    <button (click)="adjustPriority('lower', index)">Down</button>
 </div>
