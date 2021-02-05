@@ -11,6 +11,8 @@ import { MockPromptBudgetHoursComponent } from './mock-prompt-budget-hours/mock-
 import { MockPromptEmployeeCountComponent } from './mock-prompt-employee-count/mock-prompt-employee-count.component';
 import { MockPromptShiftPriorityComponent } from './mock-prompt-shift-priority/mock-prompt-shift-priority.component';
 import { MockPromptEmployeeFormsComponent } from './mock-prompt-employee-forms/mock-prompt-employee-forms.component';
+import { DayPriorityListComponent } from './day-priority-list/day-priority-list.component';
+import { DayListItemComponent } from './day-list-item/day-list-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { MockPromptEmployeeFormsComponent } from './mock-prompt-employee-forms/m
     MockPromptBudgetHoursComponent,
     MockPromptEmployeeCountComponent,
     MockPromptShiftPriorityComponent,
-    MockPromptEmployeeFormsComponent
+    MockPromptEmployeeFormsComponent,
+    DayPriorityListComponent,
+    DayListItemComponent
   ],
   imports: [
     BrowserModule,

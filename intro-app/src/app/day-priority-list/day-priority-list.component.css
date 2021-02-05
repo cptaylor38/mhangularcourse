@@ -1,0 +1,16 @@
+.daysContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.day {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.day > button {
+  margin-left: 2rem;
+}
