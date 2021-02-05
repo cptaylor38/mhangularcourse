@@ -14,6 +14,7 @@ import { MockPromptEmployeeFormsComponent } from './mock-prompt-employee-forms/m
 import { DayPriorityListComponent } from './day-priority-list/day-priority-list.component';
 import { DayListItemComponent } from './day-list-item/day-list-item.component';
 import { MockFormsHomeComponent } from './mock-forms-home/mock-forms-home.component';
+import { NgcontenttestComponent } from './ngcontenttest/ngcontenttest.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MockFormsHomeComponent } from './mock-forms-home/mock-forms-home.compon
     MockPromptEmployeeFormsComponent,
     DayPriorityListComponent,
     DayListItemComponent,
-    MockFormsHomeComponent
+    MockFormsHomeComponent,
+    NgcontenttestComponent
   ],
   imports: [
     BrowserModule,
