@@ -20,6 +20,7 @@ export class TestComponent implements OnInit {
   formCountArray: Array<number> = [];
   colorToggled: boolean = true;
   formcount: number = 1;
+  localReferenceInput: string;
   testing: boolean = false;
   conditionalComponent: boolean = false;
   addButtonEnabled: boolean = true;
@@ -42,5 +43,9 @@ export class TestComponent implements OnInit {
   }
   toggleNgClass(){
     this.ngclass = !this.ngclass;
+  }
+  localReferenceSubmit(element: HTMLInputElement){
+    console.log(element.value);
+    this.localReferenceInput = element.value;
   }
 }
