@@ -11,5 +11,5 @@ export class DayListItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @Input() day: string;
+  @Input('dayItem') day: string;
 }

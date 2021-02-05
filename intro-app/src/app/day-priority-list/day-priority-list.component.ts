@@ -7,13 +7,12 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class DayPriorityListComponent implements OnInit {
   daysArray: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-  day: string;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  adjustArray(action, index){
+  adjustArray(action: string, index: number){
     let replaced = null;
     let replacer = this.daysArray[index];
     if(action === 'higher'){

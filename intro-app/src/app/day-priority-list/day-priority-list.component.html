@@ -1,8 +1,8 @@
 <div *ngFor="let day of daysArray; let i = index" class="daysContainer">
-    <!-- <app-day-list-item [day]="day"></app-day-list-item> -->
-    <div class="day">
+    <app-day-list-item [dayItem]="day"></app-day-list-item>
+    <!-- <div class="day">
         <p>{{day}}</p>
         <button (click)="adjustArray('higher', i)">^</button>
         <button (click)="adjustArray('lower', i)">v</button>
-    </div>
+    </div> -->
 </div>

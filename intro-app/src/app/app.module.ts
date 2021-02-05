@@ -13,6 +13,7 @@ import { MockPromptShiftPriorityComponent } from './mock-prompt-shift-priority/m
 import { MockPromptEmployeeFormsComponent } from './mock-prompt-employee-forms/mock-prompt-employee-forms.component';
 import { DayPriorityListComponent } from './day-priority-list/day-priority-list.component';
 import { DayListItemComponent } from './day-list-item/day-list-item.component';
+import { MockFormsHomeComponent } from './mock-forms-home/mock-forms-home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DayListItemComponent } from './day-list-item/day-list-item.component';
     MockPromptShiftPriorityComponent,
     MockPromptEmployeeFormsComponent,
     DayPriorityListComponent,
-    DayListItemComponent
+    DayListItemComponent,
+    MockFormsHomeComponent
   ],
   imports: [
     BrowserModule,
