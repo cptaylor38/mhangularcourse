@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -25,6 +25,7 @@ export class TestComponent implements OnInit {
   conditionalComponent: boolean = false;
   addButtonEnabled: boolean = true;
   ngclass: boolean = true;
+  @ViewChild('viewChildInput',{static: true}) viewChildInput;
   toggleConditional(){
     this.conditionalComponent = !this.conditionalComponent;
   }
@@ -47,5 +48,8 @@ export class TestComponent implements OnInit {
   localReferenceSubmit(element: HTMLInputElement){
     console.log(element.value);
     this.localReferenceInput = element.value;
+  }
+  viewChildExampleSubmit(){
+    console.log(this.viewChildInput);
   }
 }
