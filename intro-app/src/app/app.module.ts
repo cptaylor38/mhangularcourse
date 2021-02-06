@@ -15,6 +15,7 @@ import { DayPriorityListComponent } from './day-priority-list/day-priority-list.
 import { DayListItemComponent } from './day-list-item/day-list-item.component';
 import { MockFormsHomeComponent } from './mock-forms-home/mock-forms-home.component';
 import { NgcontenttestComponent } from './ngcontenttest/ngcontenttest.component';
+import { TestOnchangeComponentComponent } from './test-onchange-component/test-onchange-component.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgcontenttestComponent } from './ngcontenttest/ngcontenttest.component'
     DayPriorityListComponent,
     DayListItemComponent,
     MockFormsHomeComponent,
-    NgcontenttestComponent
+    NgcontenttestComponent,
+    TestOnchangeComponentComponent
   ],
   imports: [
     BrowserModule,

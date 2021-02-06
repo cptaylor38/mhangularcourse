@@ -25,6 +25,8 @@ export class TestComponent implements OnInit {
   conditionalComponent: boolean = false;
   addButtonEnabled: boolean = true;
   ngclass: boolean = true;
+  name: string = 'george';
+
   @ViewChild('viewChildInput',{static: true}) viewChildInput;
   toggleConditional(){
     this.conditionalComponent = !this.conditionalComponent;
@@ -51,5 +53,10 @@ export class TestComponent implements OnInit {
   }
   viewChildExampleSubmit(){
     console.log(this.viewChildInput);
+  }
+
+  onChangeFirst(){
+    let randomNames = ['bob', 'ted', 'susan'];
+    this.name = randomNames[Math.floor(randomNames.length * Math.random())];
   }
 }
