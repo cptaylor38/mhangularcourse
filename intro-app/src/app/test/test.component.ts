@@ -26,6 +26,7 @@ export class TestComponent implements OnInit {
   addButtonEnabled: boolean = true;
   ngclass: boolean = true;
   name: string = 'george';
+  elements: number[] = [1, 2, 3, 4, 5]
 
   @ViewChild('viewChildInput',{static: true}) viewChildInput;
   toggleConditional(){
@@ -58,5 +59,9 @@ export class TestComponent implements OnInit {
   onChangeFirst(){
     let randomNames = ['bob', 'ted', 'susan'];
     this.name = randomNames[Math.floor(randomNames.length * Math.random())];
+  }
+
+  removeElement(){
+    this.elements.splice(0, 1);
   }
 }

@@ -16,6 +16,7 @@ import { DayListItemComponent } from './day-list-item/day-list-item.component';
 import { MockFormsHomeComponent } from './mock-forms-home/mock-forms-home.component';
 import { NgcontenttestComponent } from './ngcontenttest/ngcontenttest.component';
 import { TestOnchangeComponentComponent } from './test-onchange-component/test-onchange-component.component';
+import { ViewInitAndOnDestroyTestComponent } from './view-init-and-on-destroy-test/view-init-and-on-destroy-test.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TestOnchangeComponentComponent } from './test-onchange-component/test-o
     DayListItemComponent,
     MockFormsHomeComponent,
     NgcontenttestComponent,
-    TestOnchangeComponentComponent
+    TestOnchangeComponentComponent,
+    ViewInitAndOnDestroyTestComponent
   ],
   imports: [
     BrowserModule,
