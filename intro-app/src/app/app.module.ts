@@ -19,6 +19,8 @@ import { TestOnchangeComponentComponent } from './test-onchange-component/test-o
 import { ViewInitAndOnDestroyTestComponent } from './view-init-and-on-destroy-test/view-init-and-on-destroy-test.component';
 import { DirectivesrecapComponent } from './directivesrecap/directivesrecap.component';
 import { HighlightDirective } from './customDirectives/highlight.directive';
+import { RendererHighlightDirective } from './customDirectives/renderer-highlight.directive';
+import { ListenerDirective } from './customDirectives/listener.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HighlightDirective } from './customDirectives/highlight.directive';
     TestOnchangeComponentComponent,
     ViewInitAndOnDestroyTestComponent,
     DirectivesrecapComponent,
-    HighlightDirective
+    HighlightDirective,
+    RendererHighlightDirective,
+    ListenerDirective
   ],
   imports: [
     BrowserModule,
