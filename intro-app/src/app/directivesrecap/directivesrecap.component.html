@@ -1,0 +1,10 @@
+<p>directivesrecap works!</p>
+<p *ngIf="condition; else otherTemplate;"></p>
+<button (click)="changeCondition()">Change condition</button>
+<ng-template #otherTemplate>Some text</ng-template>
+<div class='container-fluid'>
+    <div *ngFor="let color of colors">
+        <h1 [ngStyle]="{backgroundColor: condition ? color : 'transparent'}">{{color}}</h1>
+        <p appHighlight>Custom Directive Implemented</p>
+    </div>
+</div>

@@ -17,6 +17,8 @@ import { MockFormsHomeComponent } from './mock-forms-home/mock-forms-home.compon
 import { NgcontenttestComponent } from './ngcontenttest/ngcontenttest.component';
 import { TestOnchangeComponentComponent } from './test-onchange-component/test-onchange-component.component';
 import { ViewInitAndOnDestroyTestComponent } from './view-init-and-on-destroy-test/view-init-and-on-destroy-test.component';
+import { DirectivesrecapComponent } from './directivesrecap/directivesrecap.component';
+import { HighlightDirective } from './customDirectives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ViewInitAndOnDestroyTestComponent } from './view-init-and-on-destroy-te
     MockFormsHomeComponent,
     NgcontenttestComponent,
     TestOnchangeComponentComponent,
-    ViewInitAndOnDestroyTestComponent
+    ViewInitAndOnDestroyTestComponent,
+    DirectivesrecapComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
