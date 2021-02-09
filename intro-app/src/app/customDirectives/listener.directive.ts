@@ -1,7 +1,7 @@
-import { Directive, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { Directive, OnInit, Renderer2, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-    selector: '[appRendererHighlight]'
+    selector: '[appListenerHighlight]'
 })
 
 export class ListenerDirective implements OnInit {
@@ -9,6 +9,14 @@ export class ListenerDirective implements OnInit {
     }
 
     ngOnInit(){
+        
+    }
+
+    @HostListener('mouseenter') mouseenter(eventData: Event){
+        this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'green');
+    }
+
+    @HostListener('mouseleave') mouseleave(eventData: Event){
         this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'mediumaquamarine');
     }
 }
