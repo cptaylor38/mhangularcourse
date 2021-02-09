@@ -1,4 +1,4 @@
-import { Directive, OnInit, Renderer2, ElementRef, HostListener } from '@angular/core';
+import { Directive, OnInit, Renderer2, ElementRef, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
     selector: '[appListenerHighlight]'
@@ -12,11 +12,15 @@ export class ListenerDirective implements OnInit {
         
     }
 
+    @HostBinding('style.backgroundColor') backgroundColor: string = 'aquamarine';
+
     @HostListener('mouseenter') mouseenter(eventData: Event){
-        this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'green');
+        // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'green');
+        this.backgroundColor = 'green';
     }
 
     @HostListener('mouseleave') mouseleave(eventData: Event){
-        this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'mediumaquamarine');
+        // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'mediumaquamarine');
+        this.backgroundColor = 'aquamarine';
     }
 }
