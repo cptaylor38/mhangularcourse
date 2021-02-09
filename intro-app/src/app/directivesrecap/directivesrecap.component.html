@@ -13,6 +13,7 @@
             <p *ngSwitchCase="'yes'">Yes</p>
             <p *ngSwitchCase="'no'">No</p>
             <p *ngSwitchCase="'maybe'">Maybe</p>
+            <p *ngSwitchDefault>Maybe</p>
         </div>
         <button (click)="changeAnswer('yes')">Yes</button>
         <button (click)="changeAnswer('no')">No</button>
