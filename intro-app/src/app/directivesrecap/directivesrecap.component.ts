@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesrecapComponent implements OnInit {
   colors: string[] = ["red", "blue", "yellow", "orange", "green"];
   condition: boolean = false;
+  answer: string = 'maybe';
   constructor() { }
 
   ngOnInit(): void {
@@ -17,4 +18,7 @@ export class DirectivesrecapComponent implements OnInit {
     this.condition = !this.condition;
   }
 
+  changeAnswer(answer: string){
+    this.answer = answer;
+  }
 }

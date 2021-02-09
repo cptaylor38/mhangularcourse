@@ -9,5 +9,13 @@
         <p appRendererHighlight appListenerHighlight [defaultColor]="'aquamarine'" [highlightColor]="'orange'">Custom Directive with Renderer Implemented</p>
         <p appListenerHighlight defaultColor="orange" highlightColor="purple">Special case example when doing data-binding and passing in a string</p>
         <p *appUnless="condition">Example of created structure directive, runs when condition variable is false. Opposite of ngIf</p>
+        <div [ngSwitch]="answer">
+            <p *ngSwitchCase="'yes'">Yes</p>
+            <p *ngSwitchCase="'no'">No</p>
+            <p *ngSwitchCase="'maybe'">Maybe</p>
+        </div>
+        <button (click)="changeAnswer('yes')">Yes</button>
+        <button (click)="changeAnswer('no')">No</button>
+        <button (click)="changeAnswer('maybe')">Maybe</button>
     </div>
 </div>
