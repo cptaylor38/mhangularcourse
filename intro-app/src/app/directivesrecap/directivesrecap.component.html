@@ -7,5 +7,7 @@
         <h1 [ngStyle]="{backgroundColor: condition ? color : 'transparent'}">{{color}}</h1>
         <p appHighlight>Custom Directive Implemented</p>
         <p appRendererHighlight appListenerHighlight [defaultColor]="'aquamarine'" [highlightColor]="'orange'">Custom Directive with Renderer Implemented</p>
+        <p appListenerHighlight defaultColor="orange" highlightColor="purple">Special case example when doing data-binding and passing in a string</p>
+        <p *appUnless="condition">Example of created structure directive, runs when condition variable is false. Opposite of ngIf</p>
     </div>
 </div>

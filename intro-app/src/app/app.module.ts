@@ -21,6 +21,7 @@ import { DirectivesrecapComponent } from './directivesrecap/directivesrecap.comp
 import { HighlightDirective } from './customDirectives/highlight.directive';
 import { RendererHighlightDirective } from './customDirectives/renderer-highlight.directive';
 import { ListenerDirective } from './customDirectives/listener.directive';
+import { UnlessDirective } from './customDirectives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ListenerDirective } from './customDirectives/listener.directive';
     DirectivesrecapComponent,
     HighlightDirective,
     RendererHighlightDirective,
-    ListenerDirective
+    ListenerDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
