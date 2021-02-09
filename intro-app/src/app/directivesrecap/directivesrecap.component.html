@@ -6,6 +6,6 @@
     <div *ngFor="let color of colors">
         <h1 [ngStyle]="{backgroundColor: condition ? color : 'transparent'}">{{color}}</h1>
         <p appHighlight>Custom Directive Implemented</p>
-        <p appRendererHighlight appListenerHighlight>Custom Directive with Renderer Implemented</p>
+        <p appRendererHighlight appListenerHighlight [defaultColor]="'aquamarine'" [highlightColor]="'orange'">Custom Directive with Renderer Implemented</p>
     </div>
 </div>
