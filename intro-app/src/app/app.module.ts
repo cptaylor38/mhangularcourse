@@ -22,6 +22,7 @@ import { HighlightDirective } from './customDirectives/highlight.directive';
 import { RendererHighlightDirective } from './customDirectives/renderer-highlight.directive';
 import { ListenerDirective } from './customDirectives/listener.directive';
 import { UnlessDirective } from './customDirectives/unless.directive';
+import { SyndicutMockupComponent } from './reviewfolder/syndicut-mockup/syndicut-mockup.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { UnlessDirective } from './customDirectives/unless.directive';
     HighlightDirective,
     RendererHighlightDirective,
     ListenerDirective,
-    UnlessDirective
+    UnlessDirective,
+    SyndicutMockupComponent
   ],
   imports: [
     BrowserModule,
