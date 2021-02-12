@@ -1,3 +1,3 @@
 # mhangularcourse
 
-Learning repo for Angular Udemy course and practice for scheduling app.
+Multi-purpose repo for learning Angular and Typescript.
