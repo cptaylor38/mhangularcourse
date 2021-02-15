@@ -23,6 +23,7 @@ import { RendererHighlightDirective } from './customDirectives/renderer-highligh
 import { ListenerDirective } from './customDirectives/listener.directive';
 import { UnlessDirective } from './customDirectives/unless.directive';
 import { SyndicutMockupComponent } from './reviewfolder/syndicut-mockup/syndicut-mockup.component';
+import { SimplecalculatorComponent } from './reviewfolder/simplecalculator/simplecalculator.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SyndicutMockupComponent } from './reviewfolder/syndicut-mockup/syndicut
     RendererHighlightDirective,
     ListenerDirective,
     UnlessDirective,
-    SyndicutMockupComponent
+    SyndicutMockupComponent,
+    SimplecalculatorComponent
   ],
   imports: [
     BrowserModule,

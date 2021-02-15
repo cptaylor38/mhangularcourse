@@ -1,0 +1,13 @@
+<div class='container calc-container'>
+    <div class='output-box'>{{value}}</div>
+    <div class='container operand-container'>
+        <div *ngFor="let operand of operands">
+            <button class='calc-button'>{{operand}}</button>
+        </div>
+    </div>
+    <div class='container numbers-container'>
+        <div *ngFor="let num of nums">
+            <button class='calc-button'>{{num}}</button>
+        </div>
+    </div>
+</div>

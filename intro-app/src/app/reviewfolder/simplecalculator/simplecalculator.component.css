@@ -1,0 +1,34 @@
+.calc-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20vh;
+}
+
+.output-box {
+  min-height: 4rem;
+  margin-bottom: 2rem;
+  outline: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+.operand-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.calc-button {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.numbers-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
