@@ -15,14 +15,21 @@
   padding: 2rem;
 }
 
-.operand-container {
+.button-container {
   display: flex;
   flex-direction: row;
+}
+
+.operand-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 40%;
   justify-content: space-evenly;
 }
 
 .calc-button {
   padding: 2rem;
+  margin: 1rem;
   font-size: 3rem;
 }
 
@@ -31,4 +38,5 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   margin-top: 2rem;
+  max-width: 40%;
 }
