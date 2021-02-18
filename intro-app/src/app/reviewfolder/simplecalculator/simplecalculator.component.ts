@@ -18,24 +18,19 @@ export class SimplecalculatorComponent implements OnInit {
   }
 
   setNum(number: number){
-    if(this.chosenOperand && this.chosenNum){
-      this.value = '' + number;
-    }
-    if(this.chosenOperand && !this.chosenNum){
-      this.value = '' + number;
-    }
-    if(this.chosenNum && !this.chosenOperand){
+    if(this.chosenNum){
       this.value = this.value + number;
       this.chosenNum = parseFloat(this.value);
     }
-    else{
-      this.value = number.toString();
+    else {
       this.chosenNum = number;
+      this.value = '' + this.chosenNum;
     }
   }
 
   setOperand(operand: string){
     this.previousValue = this.chosenNum;
+    this.chosenNum = null;
     switch(operand){
       case 'C':
         this.value = '0';
@@ -53,11 +48,11 @@ export class SimplecalculatorComponent implements OnInit {
         }
         break;
       case '=':
-        console.log(this.previousValue, parseFloat(this.value), this.chosenOperand);
         if(this.previousValue && parseFloat(this.value) && this.chosenOperand) this.calculate();
         break;
       default:
         this.chosenOperand = operand;
+        if(this.chosenNum) this.calculate();
         break;
     }
   }
