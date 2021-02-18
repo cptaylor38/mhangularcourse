@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SimplecalculatorComponent implements OnInit {
   operands: string[] = ['C', '+/-', '%', '/', 'x', '-', '+', '='];
   nums: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  value: number = 0;
+  value: string = '0';
   previousValue: number = 0;
   chosenOperand: string = null;
   chosenNum: number = null;
@@ -18,31 +18,43 @@ export class SimplecalculatorComponent implements OnInit {
   }
 
   setNum(number: number){
-    let newValue: string = this.value.toString() + number;
-    //mapping out logic here since not using input field and forms module.
-    
+    if(this.chosenOperand && this.chosenNum){
+      this.value = '' + number;
+    }
+    if(this.chosenOperand && !this.chosenNum){
+      this.value = '' + number;
+    }
+    if(this.chosenNum && !this.chosenOperand){
+      this.value = this.value + number;
+      this.chosenNum = parseFloat(this.value);
+    }
+    else{
+      this.value = number.toString();
+      this.chosenNum = number;
+    }
   }
 
   setOperand(operand: string){
-    this.chosenNum = null;
+    this.previousValue = this.chosenNum;
     switch(operand){
       case 'C':
-        this.value = 0;
+        this.value = '0';
         this.chosenNum = null;
         this.chosenOperand = null;
         break;
       case '+/-':
-        if(this.value !== 0){
-          this.value = this.value * -1
+        if(this.value !== '0'){
+          this.value = this.parser(parseFloat(this.value) * -1);
         }
         break;
       case '%':
-        if(this.value !== 0){
-          this.value = this.value / 100;
+        if(this.value !== '0'){
+          this.value = this.parser(parseFloat(this.value) / 100);
         }
         break;
       case '=':
-        this.calculate();
+        console.log(this.previousValue, parseFloat(this.value), this.chosenOperand);
+        if(this.previousValue && parseFloat(this.value) && this.chosenOperand) this.calculate();
         break;
       default:
         this.chosenOperand = operand;
@@ -50,24 +62,26 @@ export class SimplecalculatorComponent implements OnInit {
     }
   }
 
+  parser(num){
+    return num.toString();
+  }
+
   calculate(){
-    if(this.chosenNum && this.previousValue && this.chosenOperand){
-      switch(this.chosenOperand){
-        case '+':
-          this.value = this.previousValue + this.chosenNum;
-          break;
-        case '-':
-          this.value = this.previousValue - this.chosenNum;
-          break;
-        case '/':
-          this.value = this.previousValue / this.chosenNum;
-          break;
-        case 'x':
-          this.value = this.previousValue * this.chosenNum;
-          break;
-        default:
-          return;
-      }
+    switch(this.chosenOperand){
+      case '+':
+        this.value = this.parser(this.previousValue + this.chosenNum);
+        break;
+      case '-':
+        this.value = this.parser(this.previousValue - this.chosenNum);
+        break;
+      case '/':
+        this.value = this.parser(this.previousValue / this.chosenNum);
+        break;
+      case 'x':
+        this.value = this.parser(this.previousValue * this.chosenNum);
+        break;
+      default:
+        return;
     }
   }
 
