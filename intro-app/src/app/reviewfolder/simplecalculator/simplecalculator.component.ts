@@ -7,77 +7,66 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimplecalculatorComponent implements OnInit {
   operands: string[] = ['C', '+/-', '%', '/', 'x', '-', '+', '='];
-  nums: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  value: string = '0';
-  previousValue: number = 0;
-  chosenOperand: string = null;
-  chosenNum: number = null;
+  nums: number[] = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+  currentValue: number = null;
+  inputValue: string = null;
+  previousValue: number = null;
+  operation: string = null;
   constructor() { }
 
   ngOnInit(): void {
   }
 
   setNum(number: number){
-    if(this.chosenNum){
-      this.value = this.value + number;
-      this.chosenNum = parseFloat(this.value);
-    }
-    else {
-      this.chosenNum = number;
-      this.value = '' + this.chosenNum;
-    }
+    if(!this.inputValue){
+        this.inputValue = '' + number;
+      }
+    else this.inputValue += number;
+    this.currentValue = parseFloat(this.inputValue);
   }
 
   setOperand(operand: string){
-    this.previousValue = this.chosenNum;
-    this.chosenNum = null;
+    this.inputValue = null;
     switch(operand){
-      case 'C':
-        this.value = '0';
-        this.chosenNum = null;
-        this.chosenOperand = null;
+      case '%':
+        this.currentValue = this.currentValue / 100;
         break;
       case '+/-':
-        if(this.value !== '0'){
-          this.value = this.parser(parseFloat(this.value) * -1);
-        }
+        this.currentValue = this.currentValue * -1;
         break;
-      case '%':
-        if(this.value !== '0'){
-          this.value = this.parser(parseFloat(this.value) / 100);
-        }
+      case 'C':
+        this.currentValue = null;
+        this.previousValue = null;
+        this.operation = null;
+        this.inputValue = null;
         break;
       case '=':
-        if(this.previousValue && parseFloat(this.value) && this.chosenOperand) this.calculate();
+        this.calculate();
+        this.operation = null;
         break;
       default:
-        this.chosenOperand = operand;
-        if(this.chosenNum) this.calculate();
-        break;
+        this.previousValue = this.currentValue;
+        this.operation = operand;
     }
   }
 
-  parser(num){
-    return num.toString();
-  }
-
   calculate(){
-    switch(this.chosenOperand){
+    console.log(this.previousValue, this.operation, this.currentValue)
+    switch(this.operation){
       case '+':
-        this.value = this.parser(this.previousValue + this.chosenNum);
+        this.currentValue = (this.previousValue + this.currentValue);
         break;
       case '-':
-        this.value = this.parser(this.previousValue - this.chosenNum);
+        this.currentValue = (this.previousValue - this.currentValue);
         break;
       case '/':
-        this.value = this.parser(this.previousValue / this.chosenNum);
+        this.currentValue = (this.previousValue / this.currentValue);
         break;
       case 'x':
-        this.value = this.parser(this.previousValue * this.chosenNum);
+        this.currentValue = (this.previousValue * this.currentValue);
         break;
       default:
         return;
     }
   }
-
 }
